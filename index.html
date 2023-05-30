@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./images/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Letter as in</title>
+  </head>
+  <body>
+    <div class="grid-container">
+      <header class="header">
+        <h1 class="header-title">Letter @ as in...</h1>
+      </header>
+
+      <main class="main">
+        <div class="input-container">
+          <input
+            type="text"
+            id="user-input"
+            class="user-input"
+            placeholder="Type word/s and press Enter"
+            onkeyup="this.value = this.value.toLowerCase();"
+            autofocus
+          />
+        </div>
+        <div id="outcome_field" class="outcome-container"></div>
+      </main>
+
+      <footer class="footer">
+        <p>&copy; Made by Sebastián GR</p>
+      </footer>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
