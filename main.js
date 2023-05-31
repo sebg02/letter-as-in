@@ -32,7 +32,7 @@ const letter = {
 const default_letter = "Not valid character";
 
 function changeAcents(str) {
-  const acentos = {
+  const accents = {
     á: "a",
     é: "e",
     í: "i",
@@ -46,7 +46,7 @@ function changeAcents(str) {
   };
   return str
     .split("")
-    .map((letra) => acentos[letra] || letra)
+    .map((character) => accents[character] || character)
     .join("")
     .toString();
 }
@@ -58,14 +58,14 @@ function spellText() {
 
   for (let i of text) {
     let outcome = letter[i] || default_letter;
-    let toshow = "";
-    toshow =
+    let indivudualSentence = "";
+    indivudualSentence =
       "<b>" + i.toUpperCase() + "</b>" + " as in " + outcome.toUpperCase();
     if (i == " ") {
-      toshow = "<br>";
+      indivudualSentence = "<br>";
     }
     let newp = document.createElement("p");
-    newp.innerHTML = toshow;
+    newp.innerHTML = indivudualSentence;
     document.getElementById("outcome_field").appendChild(newp);
   }
 }
@@ -76,6 +76,6 @@ input.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
     spellText();
     document.getElementById("user-input").value = "";
-    input.blur(); // hide keyboard when pressed enter in mobiles
+    input.blur(); // hide keyboard when enter is pressed in mobiles
   }
 });

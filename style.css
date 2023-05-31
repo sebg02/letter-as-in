@@ -1,7 +1,7 @@
 :root {
-  --main-blue: #4f7cac;
-  --secondary-blue: #c0e0de;
-  --text: #162521;
+  --background: #e9e8e8;
+  --text: #030302;
+  --accent: #18314f;
 }
 
 * {
@@ -15,7 +15,7 @@ html {
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  background-color: var(--secondary-blue);
+  background-color: var(--background);
   color: var(--text);
 }
 
@@ -30,7 +30,8 @@ body {
 
 .header {
   grid-area: header;
-  background-color: var(--main-blue);
+  background-color: var(--accent);
+  color: #fbfbf8;
   padding: 1.5rem;
 }
 
@@ -45,25 +46,40 @@ body {
   justify-content: center;
   align-content: flex-start;
 }
-.main .input-container {
-  display: grid;
-  justify-content: center;
+
+.flex-container {
+  display: flex;
 }
+
+.user-input {
+  flex-grow: 1;
+  font-size: 1.2rem;
+  margin: 4rem 0.5rem 0.5rem;
+  padding: 1rem;
+  border: 3px solid var(--accent);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.info-text {
+  padding: 1rem;
+  margin: 0 auto;
+}
+
 .main .outcome-container {
   padding: 1rem;
   margin: 0 auto;
 }
-.user-input {
-  min-width: 300px;
-  font-size: 1.2rem;
-  margin: 4rem 0.5rem;
-  padding: 0.7rem;
-}
 
 .footer {
   grid-area: footer;
-  text-align: center;
-  background-color: var(--main-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+  background-color: var(--accent);
+  color: #fbfbf8;
   padding: 0.5rem;
 }
 
